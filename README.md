@@ -1,11 +1,12 @@
 ##The GeckkotaSharp Control
 
-GekkotaSharp is an experiment to see how easy/hard it is to use normal web application frameworks in a desktop application.
+GekkotaSharp is an experiment to see how easy/hard it is to use normal web application frameworks to develop  desktop applications using HTML5 GUIs, so that the same code base can be use on the web, desktops, tablets, etc.
 
 At this point, the control does just two things:
 
-1) Wraps GeckoFx so that there is zero setup needed in your code (e.g. to initialize XulRunner).
-2) Silently runs a self-hosted (embedded) Web Api REST server.
+1) Wraps [GeckoFx](https://bitbucket.org/geckofx) so that there is zero setup needed in your code (e.g. to initialize XulRunner).
+
+2) Silently runs a self-hosted (embedded) [Web Api](http://www.asp.net/web-api) REST server.
 
 ##Intended Application Architecture
 
@@ -13,7 +14,7 @@ The idea is that you create three projects:
 
 1) Web App Frontend
 
-Create your frontend in AngularJS, BackboneJS, KnockoutJS, whatever. No .net, no c#, would run on normal browsers. This will be deploy-able through normal web browsers.
+Create your frontend in AngularJS, BackboneJS, KnockoutJS, whatever. No .net, no c#. This will be deploy-able through normal web browsers.
 
 2) Simple c# backend. Mostly just a c# model of the data, maybe some logic that you don't/can't do in the frontend. The embedded REST server in Gekkota will take care of converting between json and your c#.
 
@@ -38,4 +39,4 @@ I work on teams that build free, cross-platform applications. We have these cons
 So GekkotaSharp is trying to find out if we can have the best of both worlds, and have a single code base that would server all of our users. For the frontend, we do have to work with the lowest common denominator, which is javascript. But for the backend, now-a-days you can use c# everywhere. In non-web scenarios, the front and backend can be on the same machine.
 
 ### The name
- The <i>Gekkota</i> are an infraorder of reptiles to which geckos belong, and this project uses <i>geckofx</i> the control based on Mozilla's xulrunner.
+ The <i>Gekkota</i> are an infraorder of reptiles to which geckos belong, and this project uses [geckofx](https://bitbucket.org/geckofx), a .net wrapper for Mozilla's xulrunner embed-able browser.
