@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp_DesktopWrapper", "src\SampleApp_DesktopWrapper\SampleApp_DesktopWrapper.csproj", "{A52F4FB9-BE76-4629-B2E6-B9E04C90DE49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp_AngularFrontEnd", "src\SampleApp_AngularFrontEnd\SampleApp_AngularFrontEnd.csproj", "{03287408-3023-4277-A8F4-77C72FB01001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp_Backend", "src\SampleApp_Backend\SampleApp_Backend.csproj", "{E3F319CC-F6B0-41C3-A03B-4584B2D5DC02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GekkotaSharp", "src\GekkotaSharp\GekkotaSharp.csproj", "{F76BC906-E474-40AF-A19C-7B65660F93D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A52F4FB9-BE76-4629-B2E6-B9E04C90DE49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52F4FB9-BE76-4629-B2E6-B9E04C90DE49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A52F4FB9-BE76-4629-B2E6-B9E04C90DE49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A52F4FB9-BE76-4629-B2E6-B9E04C90DE49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03287408-3023-4277-A8F4-77C72FB01001}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{03287408-3023-4277-A8F4-77C72FB01001}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{03287408-3023-4277-A8F4-77C72FB01001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03287408-3023-4277-A8F4-77C72FB01001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F319CC-F6B0-41C3-A03B-4584B2D5DC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F319CC-F6B0-41C3-A03B-4584B2D5DC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F319CC-F6B0-41C3-A03B-4584B2D5DC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F319CC-F6B0-41C3-A03B-4584B2D5DC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F76BC906-E474-40AF-A19C-7B65660F93D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F76BC906-E474-40AF-A19C-7B65660F93D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F76BC906-E474-40AF-A19C-7B65660F93D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F76BC906-E474-40AF-A19C-7B65660F93D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

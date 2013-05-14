@@ -1,4 +1,41 @@
-gekkotaSharp
-============
+##The GeckkotaSharp Control
 
-An (experimental) winforms control which combines geckofx, orm, and embedded REST server for Web App desktop apps.
+GekkotaSharp is an experiment to see how easy/hard it is to use normal web application frameworks in a desktop application.
+
+At this point, the control does just two things:
+
+1) Wraps GeckoFx so that there is zero setup needed in your code (e.g. to initialize XulRunner).
+2) Silently runs a self-hosted (embedded) Web Api REST server.
+
+##Intended Application Architecture
+
+The idea is that you create three projects:
+
+1) Web App Frontend
+
+Create your frontend in AngularJS, BackboneJS, KnockoutJS, whatever. No .net, no c#, would run on normal browsers. This will be deploy-able through normal web browsers.
+
+2) Simple c# backend. Mostly just a c# model of the data, maybe some logic that you don't/can't do in the frontend. The embedded REST server in Gekkota will take care of converting between json and your c#.
+
+3) Simple c# desktop app. This is mostly just windows dialogs which each contain a single GekkotaSharpControl. You hand that control a path to an html file from your Web App Frontend project.
+
+
+
+##Why Bother?
+
+I work on teams that build free, cross-platform applications. We have these constraints:
+
++ Can't be just a web app
+  + Many of our users are often poor rural people (non) developing nations. They can't be online all the time, or in many cases, at all. 
++ Can't afford to do a number of native apps
+  + Because our products are free, we don't get new resources by releasing on new platforms & getting new users... we do it because we can then do more good.
++ Can't limit to one platform
+  + Users have different needs, can't always just buy the hardware to match our chosen platform. So we would like to deliver on Windows, Mac, tablets, and the web. 
++ Can't start from scratch, with, say, java.
+  + Even with Java, you have to do something special to get on the web (e.b. GWT).
+  + We have 12 years of domain-specific c# libraries we'd like to not have to re-write.
+
+So GekkotaSharp is trying to find out if we can have the best of both worlds, and have a single code base that would server all of our users. For the frontend, we do have to work with the lowest common denominator, which is javascript. But for the backend, now-a-days you can use c# everywhere. In non-web scenarios, the front and backend can be on the same machine.
+
+### The name
+ The <i>Gekkota</i> are an infraorder of reptiles to which geckos belong, and this project uses <i>geckofx</i> the control based on Mozilla's xulrunner.

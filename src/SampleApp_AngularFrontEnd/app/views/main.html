@@ -1,0 +1,22 @@
+<div>
+   <h1>Books</h1>
+    <ul>
+      <li id="item_{{book.Id}}" ng-repeat="book in books" context="bookContextMenu" ng-click="hello(book)">{{book.Name}}+" "+{{book.Id}}</li>
+  </ul>
+
+     <button ng-click="NewBook()" ng-disabled="books.length > 5">New Book</button>
+    <p></p>
+    <p>Right-click deletes. Only 5 items allowed before new item is disabled</p>
+
+    <ul id="bookContextMenu" class="dropdown-menu">
+        <li><a ng-click="hello(book)">Hello</a></li>
+        <li><a ng-click="delete(book)">Delete</a></li>
+    </ul>
+
+    <h1>Book2</h1>
+    <ul>
+        <div ng-repeat="book in books">
+            <li id="item2_{{book.Id}}" context="bookContextMenu2" ng-click="hello(book)">{{$index+": "+book.Name+" "+book.Id}}</li>
+        </div>
+    </ul>
+</div>
