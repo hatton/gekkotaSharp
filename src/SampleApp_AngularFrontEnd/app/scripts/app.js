@@ -1,6 +1,6 @@
 'use strict';
 
-var SampleApp = angular.module('SampleApp', ["ngResource"])
+var SampleApp = angular.module('SampleApp', ["ngResource", "ui.bootstrap"])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -11,13 +11,18 @@ var SampleApp = angular.module('SampleApp', ["ngResource"])
         templateUrl: 'views/settings.html',
         controller: 'SettingsCtrl'
       })
+      .when('/EditBook', {
+        templateUrl: 'views/EditBook.html',
+        controller: 'EditBookCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
   });
 
 SampleApp.factory('Books', function ($resource) {
-    return $resource('/api/books', {}, { update: { method: 'PUT' } });
+    return $resource('/api/books/:id', //review posting (but not update/putting) worked without the /:id as well
+        {}, { 'update': { method: 'PUT' } });
 });
 
 SampleApp.directive('rightClick', function ($parse) { //nb: the actual attribute must be "right-click". I can't explain the discrepency between that and the needed "rightClick" here.

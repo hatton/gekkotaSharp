@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('SampleApp')
-  .controller('SettingsCtrl', function ($scope, dialog) {
+  .controller('EditBookCtrl', function ($scope, book, dialog) {
+        $scope.book = book;
 
         $scope.save = function() {
             dialog.close($scope.book);

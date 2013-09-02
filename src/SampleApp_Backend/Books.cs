@@ -46,13 +46,40 @@ namespace SampleApp_Backend
 
 		}
 
+
+
+		/// <summary>
+		/// Update and existing book
+		/// </summary>
+		public HttpResponseMessage PutBook(Book book)
+		{
+			if (ModelState.IsValid)
+			{
+				Debug.Assert(!string.IsNullOrEmpty(book.Id));
+				Book foundBook = _books.Where(b => b.Id == book.Id).FirstOrDefault();
+
+				if (foundBook == null)//why always false?
+					return Request.CreateResponse<Book>(HttpStatusCode.NotFound, null);//review: what's the right code?
+
+				_books.Remove(foundBook);
+				_books.Add(book);
+				HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Accepted, book);//review: what's the right code?
+				//response.Headers.Location = new Uri(Request.RequestUri, string.Format("book/{0}", book.Id));//review
+				return response;
+			}
+			else
+			{
+				return Request.CreateResponse<Book>(HttpStatusCode.BadRequest, null);
+			}
+		}
+
 		//add a book
 		public HttpResponseMessage PostBook(Book book)
 		{
 			if (ModelState.IsValid)
 			{
 				Debug.Assert(string.IsNullOrEmpty(book.Id));
-				book.Id = Guid.NewGuid().ToString().Substring(0,4);//4 should get is through the sample
+				book.Id = Guid.NewGuid().ToString().Substring(0, 4);//4 should get is through the sample
 				_books.Add(book);
 
 				HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, book);

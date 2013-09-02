@@ -1,1 +1,11 @@
-<p>This is the settings view.</p>
+<div class="modal-header">
+    <h1>Settings</h1>
+</div>
+<div id="bottomButtonRow">
+    <div data-bind="template: { library: 'PalasoLibrary', name: 'SettingsProtection.SettingsProtectionButton.SettingsProtectionButton', data: SettingsProtectionButtonViewModel }"></div>
+
+    <div class="modal-footer">
+        <button ng-click="save()" class="btn btn-primary" >OK</button>
+        <button ng-click="close()" class="btn" >Cancel</button>
+    </div>
+</div>
