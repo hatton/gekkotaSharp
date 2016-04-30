@@ -45,6 +45,5 @@ So GekkotaSharp is trying to find out if we can have the best of both worlds, an
 ### Building
 
 netsh http add urlacl url=http://+:5432/  user=everyone
-unzip http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.2/runtimes/ into  lib, so you have lib/xulrunner.
 You'll need npm, grunt, bower, etc.
 Open solution, build. That should run npm install and run then angularjs-based sample app.
