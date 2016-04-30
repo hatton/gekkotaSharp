@@ -1,6 +1,6 @@
 ##The GeckkotaSharp Control
 
-GekkotaSharp is an experiment to see how easy/hard it is to use normal web application frameworks to develop  desktop applications using HTML5 GUIs, so that the same code base can be use on the web, desktops, tablets, etc.
+GekkotaSharp is an experiment to see how easy/hard it is to use normal web application frameworks to develop .net desktop applications using HTML5 GUIs, so that the same code base can be use on the web, desktops, tablets, etc.
 
 At this point, the control does just two things:
 
@@ -40,3 +40,11 @@ So GekkotaSharp is trying to find out if we can have the best of both worlds, an
 
 ### The name
  The <i>Gekkota</i> are an infraorder of reptiles to which geckos belong, and this project uses [geckofx](https://bitbucket.org/geckofx), a .net wrapper for Mozilla's xulrunner embed-able browser.
+ 
+ 
+### Building
+
+netsh http add urlacl url=http://+:5432/  user=everyone
+unzip http://ftp.mozilla.org/pub/mozilla.org/xulrunner/releases/18.0.2/runtimes/ into  lib, so you have lib/xulrunner.
+You'll need npm, grunt, bower, etc.
+Open solution, build. That should run npm install and run then angularjs-based sample app.
